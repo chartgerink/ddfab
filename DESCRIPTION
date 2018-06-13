@@ -1,0 +1,9 @@
+Package: ddfab
+Version: 0.0.0.9000
+Title: Detecting Data Fabrication
+Description: Statistical methods to detect potential data fabrication. These methods are taken from a variety of sources and are unvalidated. This package is mainly aimed at standardizing the code used to run these methods and should not be taken as a validated set of tools.
+Authors@R: person("Chris", "Hartgerink", , "chjh@pm.me", c("aut", "cre"))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
