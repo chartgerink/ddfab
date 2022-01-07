@@ -12,7 +12,7 @@ plot_digit_analysis(x, type = "terminal")
 \item{type}{Type of digit analysis ('benford' or 'terminal')}
 }
 \value{
-Plot
+Boolean
 }
 \description{
 Plot of digit analysis
