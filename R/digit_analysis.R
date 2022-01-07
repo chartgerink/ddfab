@@ -49,6 +49,22 @@ digit_analysis <- function(x, type = 'terminal') {
   return(pval)
 }
 
+#' Plot of digit analysis
+#'
+#' @param x A vector or matrix of numeric values.
+#' @param type Type of digit analysis ('benford' or 'terminal')
+#'
+#' @return Plot
+#' @export
+#'
+#' @examples 
+#'  plot_digit_analysis(c(1.234, 65.4321, 53.222), type = 'terminal')
+#'  plot_digit_analysis(c(1.234, 65.4321, 53.222), type = 'benford')
+
+plot_digit_analysis <- function (x, type = 'terminal') {
+  plot(x, type='o', ylim=c(0, max(x)), xlab="Digit", ylab="Frequency", main=sprintf('P-value %s: %s', type, digit_analysis(x))) + abline(h = sum(x) / length(x), lty=3)
+}
+
 digit_counter <- function(x, type) {
   if(!is.vector(x)) stop("Currently only works with vectors.")
   
