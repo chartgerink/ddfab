@@ -62,7 +62,8 @@ digit_analysis <- function(x, type = 'terminal') {
 #'  plot_digit_analysis(c(1.234, 65.4321, 53.222), type = 'benford')
 
 plot_digit_analysis <- function (x, type = 'terminal') {
-  plot(x, type='o', ylim=c(0, max(x)), xlab="Digit", ylab="Frequency", main=sprintf('P-value %s: %s', type, digit_analysis(x))) + abline(h = sum(x) / length(x), lty=3)
+  digits <- digit_counter(x, type = 'terminal')
+  plot(digits, type='o', ylim=c(0, max(x)), xlab="Digit", ylab="Frequency", main=sprintf('P-value %s: %s', type, digit_analysis(x))) + abline(h = sum(digits) / length(x), lty=3)
 
   return(TRUE)
 }
