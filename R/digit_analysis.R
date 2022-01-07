@@ -65,7 +65,7 @@ plot_digit_analysis <- function (x, type = 'terminal') {
   digits <- digit_counter(x, type = 'terminal')
   plot(digits, type='o', ylim=c(0, max(x)), xlab="Digit", ylab="Frequency", main=sprintf('P-value %s: %s', type, digit_analysis(x))) + abline(h = sum(digits) / length(x), lty=3)
 
-  return(TRUE)
+  return(digits)
 }
 
 digit_counter <- function(x, type) {
