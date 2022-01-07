@@ -2,5 +2,5 @@
 
 export(digit_analysis)
 export(fisher_method)
+export(plot_digit_analysis)
 export(std_var)
-importFrom("stats", "pchisq", "rchisq", "sd")
